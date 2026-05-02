@@ -276,16 +276,23 @@ html.custom-cursor-active * {
 .nav__links {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: flex-end;
+  flex: 1 1 auto;
+  justify-content: flex-start;
   gap: 0.25rem 0.85rem;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 auto;
   padding: 0;
   max-width: none;
   min-width: 0;
   overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   white-space: nowrap;
+}
+
+.nav__links li {
+  flex: 0 0 auto;
 }
 
 .nav__links::-webkit-scrollbar {
@@ -314,6 +321,10 @@ html.custom-cursor-active * {
   .nav {
     min-height: 4rem;
     padding-inline-end: 3.35rem;
+  }
+
+  .nav__links {
+    gap: 0.7rem;
   }
 }
 
