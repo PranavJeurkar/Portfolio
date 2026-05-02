@@ -43,7 +43,7 @@ export function Hero() {
           </div>
         </div>
         <div className="hero__media" aria-hidden="true">
-          <img src="/developer-coding-3d.png" alt="" />
+          <img src={`${import.meta.env.BASE_URL}developer-coding-3d.png`} alt="" />
         </div>
       </div>
     </section>
